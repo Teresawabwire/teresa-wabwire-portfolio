@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#003820">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Teresa Wabwire | Senior SME Finance, Credit & Risk Leader">
-<meta property="og:description" content="Commercial growth, credit discipline and strategic partnerships across SME finance, working capital and inclusive enterprise development.">
+<meta property="og:description" content="Commercial growth, credit discipline and strategic partnerships across SME finance, working capital, transaction experience and inclusive enterprise development.">
 <style>
 :root{
   --green:#003820;--leaf:#106840;--fresh:#189040;--gold:#B8860B;--gold-light:#D9BD70;
@@ -126,6 +126,7 @@ section{padding:74px 8%}
 .role-panel[open] summary:after{content:"−"}
 .role-panel h3{color:var(--green);font-size:19px;line-height:1.35;margin-bottom:4px}
 .role-org{color:var(--leaf);font-size:12px;font-weight:700;margin-bottom:7px}
+.role-date{display:inline-block;margin:0 0 8px;padding:3px 8px;background:var(--pale);color:var(--leaf);font-size:11px;font-weight:700;letter-spacing:.3px;border-radius:2px}
 .role-summary{max-width:800px;color:var(--grey);font-size:13px;line-height:1.75}
 .role-detail{padding:15px 20px;margin-top:15px;background:var(--light);border-left:2px solid var(--gold)}
 .role-detail h4{color:var(--green);font-size:12px;margin-bottom:7px}
@@ -157,6 +158,51 @@ section{padding:74px 8%}
 .impact-row h3{color:var(--green);font-size:16px;margin-bottom:4px}
 .impact-row p{color:var(--grey);font-size:13px;line-height:1.75}
 .impact-row .impact-extra{padding:10px 30px 0 0;color:var(--grey);font-size:13px;line-height:1.8}
+
+
+
+/* SIGNATURE PROJECTS: editorial case-study portfolio */
+.projects-section{background:#fff;position:relative}
+.projects-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:30px}
+.projects-heading .intro{max-width:560px}
+.projects-note{border-left:3px solid var(--gold);padding:13px 17px;background:var(--light);font-size:12px;color:var(--grey);line-height:1.7}
+.project-feature{display:grid;grid-template-columns:.72fr 1.28fr;background:var(--green);color:var(--white);margin-bottom:18px;box-shadow:var(--shadow)}
+.project-feature-mark{padding:30px;background:linear-gradient(145deg,var(--green),var(--leaf));display:flex;flex-direction:column;justify-content:space-between;min-height:220px}
+.project-feature-mark .project-index{color:var(--gold-light);font-size:11px;font-weight:700;letter-spacing:1.6px}
+.project-feature-mark strong{font-size:clamp(31px,4vw,47px);color:var(--gold-light);line-height:1.05;margin-top:22px}
+.project-feature-mark span:last-child{font-size:11px;color:#E1ECE4;letter-spacing:1.2px;text-transform:uppercase;margin-top:8px}
+.project-feature-copy{padding:29px 33px;display:flex;flex-direction:column;justify-content:center}
+.project-kicker{color:var(--gold-light);font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.project-feature-copy h3{font-size:21px;color:#fff;line-height:1.35;margin-bottom:9px}
+.project-feature-copy p{font-size:13px;color:#E1ECE4;line-height:1.8;max-width:720px}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}
+.project-tags span{border:1px solid rgba(255,255,255,.28);padding:5px 9px;color:#E5EEE8;font-size:10px;letter-spacing:.3px}
+.project-cases{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.project-case{background:var(--light);border:1px solid var(--line);padding:25px 26px 22px;position:relative;min-height:230px;display:flex;flex-direction:column}
+.project-case:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--leaf)}
+.project-case:nth-child(2):before{background:var(--gold)}
+.project-case:nth-child(3):before{background:var(--sage)}
+.project-case:nth-child(4):before{background:var(--leaf)}
+.project-case-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}
+.project-case-no{font-size:10px;font-weight:700;letter-spacing:1.4px;color:var(--gold)}
+.project-case-type{font-size:10px;color:var(--leaf);font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-align:right}
+.project-case h3{color:var(--green);font-size:17px;line-height:1.4;margin-bottom:7px}
+.project-case p{font-size:13px;line-height:1.75;color:var(--grey)}
+.project-case details{margin-top:auto;padding-top:13px}
+.project-case summary{cursor:pointer;list-style:none;color:var(--leaf);font-weight:700;font-size:12px}
+.project-case summary::-webkit-details-marker{display:none}
+.project-case summary:after{content:"＋";margin-left:8px;color:var(--gold);font-size:16px}
+.project-case details[open] summary:after{content:"−"}
+.project-detail{padding-top:10px;font-size:12px;line-height:1.8;color:var(--grey)}
+.project-caveat{margin-top:16px;color:var(--grey);font-size:11px;line-height:1.65}
+@media(max-width:900px){.projects-heading{grid-template-columns:1fr;gap:15px}}
+@media(max-width:650px){
+  .project-feature{grid-template-columns:1fr}
+  .project-feature-mark{min-height:145px;padding:22px}
+  .project-feature-copy{padding:23px}
+  .project-cases{grid-template-columns:1fr}
+  .project-case{min-height:0;padding:22px 21px}
+}
 
 /* AMANZI: distinctive venture feature and three-stage HELA pathway */
 .amanzi{background:linear-gradient(125deg,#003820 0%,#07512F 100%);color:var(--white);overflow:hidden;position:relative}
@@ -281,6 +327,7 @@ footer span{color:var(--gold-light)}
     <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#experience">Experience</a>
+    <a href="#projects">Signature Projects</a>
     <a href="#impact">Impact</a>
     <a href="#amanzi">Amanzi Africa</a>
     <a href="#qualifications">Qualifications</a>
@@ -312,7 +359,7 @@ footer span{color:var(--gold-light)}
 <div class="stats">
   <div class="stats-grid">
     <div class="stat"><strong>18+</strong><span>Years of Professional Experience</span></div>
-    <div class="stat"><strong>USD 1.8M</strong><span>Export Trade Portfolio Experience</span></div>
+    <div class="stat"><strong>USD 1.8M</strong><span>LC Discounting Structured</span></div>
     <div class="stat"><strong>KES 60M</strong><span>SME Supplier Financing Unlocked</span></div>
     <div class="stat"><strong>40+</strong><span>Women-led Agribusinesses Supported</span></div>
   </div>
@@ -339,11 +386,11 @@ footer span{color:var(--gold-light)}
         <p>Explore SME origination, working-capital finance, transaction assessment, facility structuring, portfolio risk and institutional financing relationships.</p>
         <span>View core capabilities →</span>
       </a>
-      <a class="audience-card" href="#impact">
+      <a class="audience-card" href="#projects">
         <div class="audience-kicker">For development & value-chain partners</div>
         <h3>Inclusive enterprise & value-chain growth</h3>
         <p>Explore agricultural SME support, women-led enterprise initiatives, value-chain development and partnerships connecting enterprises with markets and finance.</p>
-        <span>View selected impact →</span>
+        <span>View signature projects →</span>
       </a>
     </div>
   </div>
@@ -424,40 +471,340 @@ footer span{color:var(--gold-light)}
 <section id="experience">
   <div class="section-inner">
     <div class="section-label">Career & Leadership</div>
-    <h2 class="section-title">Selected Professional Experience</h2>
-    <p class="experience-intro">My experience spans banking, financial technology, SME financing and development-oriented enterprise finance. The engagements below are grouped by organisation and area of contribution rather than presented as a strict chronological sequence.</p>
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="experience-intro">The portfolio below now includes my supplied role history across SME finance, fintech, development finance, corporate banking, credit risk and secured lending. Open each employer and title to see the full responsibilities and achievements.</p>
     <p class="disclosure-hint">Open a role to see a fuller description of the work and areas of contribution.</p>
     <div class="career-track">
       <div class="role-entry">
-        <div class="role-kind">Current work</div>
+        <div class="role-kind">SME finance</div>
         <details class="role-panel">
-          <summary><h3>SME Business Development & Credit Management</h3><p class="role-org">Kuza Factors</p><p class="role-summary">Working capital financing, SME origination, credit assessment, portfolio risk and financing solutions for growing enterprises.</p></summary>
-          <div class="role-detail"><h4>Focus areas</h4><ul><li>SME client origination and financing opportunity assessment.</li><li>Credit appraisal and working-capital facility analysis.</li><li>Portfolio risk, repayment capacity and transaction considerations.</li><li>Financing solutions for businesses operating in supply chains and trade.</li></ul></div>
+          <summary>
+            <h3>Head of Growth and Risk</h3>
+            <p class="role-org">Kuza Factors Limited</p>
+            <span class="role-date">Jul 2025 – Present</span>
+            <p class="role-summary">End-to-end oversight of credit risk and lending operations, from client sourcing and onboarding through appraisal, approval, disbursement and portfolio monitoring.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Provide end-to-end oversight of credit risk and lending operations, covering client sourcing and onboarding, credit appraisal, approval, disbursement and portfolio monitoring.</li>
+              <li>Contributed to more than KES 24 million in disbursements to SME agribusiness enterprises across multiple value chains.</li>
+              <li>Supported financing to livestock and fresh-meat export businesses, as well as livestock-feed manufacturers.</li>
+              <li>Built a portfolio served entirely through trade instruments and factoring solutions, supporting businesses aggregating and supplying agricultural produce into Tier 1, Tier 2 and export markets.</li>
+            </ul>
+          </div>
         </details>
       </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Commercial & risk</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Head of Commercial and Risk</h3>
+            <p class="role-org">Keystone Capital Limited</p>
+            <span class="role-date">Mar 2025 – End date not supplied</span>
+            <p class="role-summary">Risk-policy development, stronger onboarding controls, supplier sourcing and commercial pipeline development.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Designed and implemented Phase 1 of the organisation's risk policy.</li>
+              <li>Oversaw procurement planning for AI technology intended to strengthen the rigour of screening at client onboarding.</li>
+              <li>Used commercial networks in Neema, Kiamaiko, Kiserian and Juja International Abattoir to identify emerging suppliers.</li>
+              <li>Onboarded five suppliers representing KES 32 million, with a further pipeline potential of KES 350 million.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
       <div class="role-entry">
         <div class="role-kind">Fintech</div>
         <details class="role-panel">
-          <summary><h3>Fintech & Working Capital Finance</h3><p class="role-org">Wareflow Technologies</p><p class="role-summary">Experience in innovative SME financing, transaction-based financing models, business development and credit risk.</p></summary>
-          <div class="role-detail"><h4>Focus areas</h4><ul><li>SME-to-SME purchase-order and invoice-based financing models.</li><li>Business development and working-capital opportunity origination.</li><li>Credit and risk considerations for transaction-led finance.</li><li>Developing financing approaches around commercial transactions.</li></ul></div>
+          <summary>
+            <h3>Head of Business Development and Partnerships</h3>
+            <p class="role-org">Wareflow Technologies</p>
+            <span class="role-date">Jan 2025 – Jul 2025</span>
+            <p class="role-summary">Introduced agribusiness financing, onboarded exporters and retail supply-chain businesses, and developed a KES 184 million pipeline.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Introduced agribusiness financing and onboarded exporters in fresh vegetables, avocado, livestock and meat, as well as businesses supplying local retail distribution chains.</li>
+              <li>Grew the financing pipeline to KES 184 million, with a reported approval rate of 98%.</li>
+              <li>Worked to de-risk lending by improving the quality of information available for strategic planning, credit management and credit-policy development.</li>
+              <li>Supported risk review and information improvements intended to enable catalytic portfolio growth while maintaining portfolio quality.</li>
+            </ul>
+          </div>
         </details>
       </div>
+
       <div class="role-entry">
-        <div class="role-kind">Development finance</div>
+        <div class="role-kind">Impact finance</div>
         <details class="role-panel">
-          <summary><h3>Development Finance & Agribusiness Partnerships</h3><p class="role-org">FACTS Africa and Development Finance Programmes</p><p class="role-summary">SME financing, agricultural value-chain development, women-led enterprise support, impact partnerships and financial inclusion initiatives.</p></summary>
-          <div class="role-detail"><h4>Selected areas of contribution</h4><ul><li>Supporting women-led and women-owned agricultural SMEs through training, mentorship and financing initiatives.</li><li>SME appraisal and coaching within agricultural value chains.</li><li>Work on climate-smart enterprise solutions, including a meat exporter targeting the UAE and Oman markets.</li><li>Partnership work involving social-impact mapping and monitoring across cocoa, soya and coffee producer groups in western Uganda.</li></ul></div>
+          <summary>
+            <h3>Relationship Manager – Kenya</h3>
+            <p class="role-org">FACTS Africa Limited</p>
+            <span class="role-date">Mar 2023 – Jan 2025</span>
+            <p class="role-summary">Agribusiness and rural enterprise finance through invoice discounting, factoring, reverse factoring and development-partner relationships.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Worked as an impact lender in conjunction with USAID KIM, supporting rural communities in livestock and beef, goats and sheep, including livestock production and fresh-meat sales for local and export markets.</li>
+              <li>Focused on invoice discounting, factoring and reverse factoring for agribusinesses, including animal-feed manufacturers and traders supplying feed components.</li>
+              <li>Onboarded 16 new agribusiness relationships and contributed to asset-book growth. The supplied USD growth figure requires confirmation and is therefore not published here.</li>
+              <li>Financed eight women-led businesses and led the onboarding of five enterprises using gender-inclusive solutions.</li>
+              <li>Managed technical-assistance partnerships supporting portfolio SMEs through training and impact- and sustainability-focused projects with Rabobank and development partners including Aceli and USAID Kenya.</li>
+              <li>Applied trade instruments as viable collateral for horticultural exporters.</li>
+              <li>Completed Factor Chain International certification in Supply Chain Financing and Reverse Factoring.</li>
+            </ul>
+          </div>
         </details>
       </div>
+
       <div class="role-entry">
-        <div class="role-kind">Banking</div>
+        <div class="role-kind">Trade finance</div>
         <details class="role-panel">
-          <summary><h3>Banking & Relationship Management</h3><p class="role-org">Kenyan Banking Sector</p><p class="role-summary">Over a decade of banking experience across relationship management, business development, credit and financial services.</p></summary>
-          <div class="role-detail"><h4>Professional foundation</h4><ul><li>Relationship and account management across banking clients.</li><li>Business development, client portfolio growth and financial services.</li><li>Exposure to SME and corporate banking, credit and trade-related finance.</li><li>Practical experience balancing client needs, business growth and credit discipline.</li></ul></div>
+          <summary>
+            <h3>Head of Operations and Customer Experience</h3>
+            <p class="role-org">Pestol Africa Limited</p>
+            <span class="role-date">Jan 2019 – Dec 2023</span>
+            <p class="role-summary">Introduced trade-finance structures for farmer groups and agricultural equipment transactions, while building sales capability.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Introduced the use of trade instruments to enable farmer groups to finance the importation and installation of agricultural equipment and machinery.</li>
+              <li>Structured letter-of-credit facilities of up to USD 3 million.</li>
+              <li>Onboarded transactions and deals valued at USD 800,000 during the period of service.</li>
+              <li>Recruited and trained the sales team in trade finance, equipping them to scope client financial needs and identify financing opportunities.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Corporate & SME</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Senior Corporate and SME Relationship Manager</h3>
+            <p class="role-org">Equity Bank Kenya Limited</p>
+            <span class="role-date">Aug 2018 – Aug 2019</span>
+            <p class="role-summary">Developed ecosystem-banking relationships across agricultural value chains and structured supplier finance around actual cash flows.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Built ecosystem-banking relationships across dairy and beef, tea, animal-feed manufacturing inputs, eggs and broiler production, and wheat value chains.</li>
+              <li>Structured trade-finance products around supplier and off-taker cash flows rather than relying exclusively on conventional lending.</li>
+              <li>Designed and implemented an ecosystem-banking model for two bread manufacturers.</li>
+              <li>Unlocked KES 60 million for SMEs supplying the two manufacturers under the pilot programme.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Corporate & SME</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Senior Corporate and SME Relationship Manager</h3>
+            <p class="role-org">Bank of Africa Kenya Limited</p>
+            <span class="role-date">Jul 2015 – Jul 2018</span>
+            <p class="role-summary">Managed corporate and SME credit relationships, trade-finance structures and ecosystem opportunities across export and manufacturing value chains.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Prepared credit memoranda for portfolio clients, pursued approvals and ensured approved limits and covenants were properly documented in the banking system.</li>
+              <li>Improved portfolio income by 85% through disciplined portfolio and credit-management activity.</li>
+              <li>Onboarded a major phosphate exporter and developed trade-financing opportunities across its growing value chain.</li>
+              <li>Obtained approval for trade-finance limits for businesses within the exporter's ecosystem.</li>
+              <li>Structured sight letters of credit for importation of raw materials by large plastic-tank manufacturers.</li>
+              <li>Financed advance payment guarantees for government road contractors.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Corporate banking</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Corporate Relationship Manager</h3>
+            <p class="role-org">I&amp;M Bank Kenya Limited</p>
+            <span class="role-date">Mar 2013 – Jul 2015</span>
+            <p class="role-summary">Served manufacturing and agribusiness clients, developed export relationships and supported an integrated trade-finance service model.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Managed niche corporate clients in manufacturing and agribusiness.</li>
+              <li>Grew the portfolio by onboarding a major Kenyan flower exporter.</li>
+              <li>Was seconded to the trade-finance team to help establish a one-stop service point for trade clients and create opportunities to cross-sell other corporate banking products.</li>
+              <li>Trained colleagues and implemented onboarding of corporate groups of companies, using common pricing arrangements for smaller operations belonging to corporates with shared directors.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Corporate banking</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Corporate Relationship Manager</h3>
+            <p class="role-org">UBA Bank Kenya Limited</p>
+            <span class="role-date">Jan 2012 – Dec 2012</span>
+            <p class="role-summary">Built an agribusiness export portfolio to USD 18 million in trade products and structured LC discounting to fund exporter working capital.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Managed an agribusiness portfolio focused on agricultural exports.</li>
+              <li>Built the trade-product portfolio to USD 18 million across Usance and sight letters of credit, guarantees, LPO financing and invoice discounting.</li>
+              <li>Documented the portfolio to prescribed standards.</li>
+              <li>Participated in intra-African trade seminars and established market linkages that made use of trade facilities.</li>
+              <li>Structured USD 1.8 million in LC discounting to fund working capital for a major Kenyan flower exporter.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Credit & risk</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Assistant Corporate Relationship Manager</h3>
+            <p class="role-org">Barclays Bank Kenya Limited</p>
+            <span class="role-date">Oct 2010 – Dec 2012</span>
+            <p class="role-summary">Supported corporate credit-risk analysis, portfolio compliance, credit-management capability and improvements to onboarding standards.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Worked under the sector head on credit-risk analysis and compliance across the portfolio, while gaining exposure to the sector-head role.</li>
+              <li>Successfully completed the Credit Management programme through Barclays IFS London College.</li>
+              <li>Championed and participated in Basel II enhancements to Know Your Customer (KYC) standards.</li>
+              <li>Proposed improvements to corporate account-opening forms as part of improving customer experience at onboarding.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">SME banking</div>
+        <details class="role-panel">
+          <summary>
+            <h3>SME Business Customer Advisor</h3>
+            <p class="role-org">Barclays Bank Kenya Limited</p>
+            <span class="role-date">Aug 2008 – Oct 2010</span>
+            <p class="role-summary">Managed and grew an SME portfolio in Kisumu through business development, credit-paper preparation and customer acquisition.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Managed and expanded a client portfolio by recruiting oil resellers operating from the Kenya Ports Authority depot in Kisumu.</li>
+              <li>Recruited Business Club customers to support the New Kisumu Business Centre in reaching break-even and profitability.</li>
+              <li>Led business development, credit-paper preparation, legal processes and compliance activities.</li>
+              <li>Increased the portfolio from KES 8 million to KES 35 million.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="role-entry">
+        <div class="role-kind">Secured lending</div>
+        <details class="role-panel">
+          <summary>
+            <h3>Relationship Manager – Secured Lending</h3>
+            <p class="role-org">Standard Chartered Bank Kenya Limited</p>
+            <span class="role-date">Dec 2005 – Aug 2008</span>
+            <p class="role-summary">Developed secured-lending business through property-market engagement, customer acquisition and relationship management.</p>
+          </summary>
+          <div class="role-detail">
+            <h4>Responsibilities & achievements</h4>
+            <ul>
+              <li>Supervised the bank's participation at the Annual Kenya Housing Expo from 2005 to 2008.</li>
+              <li>Established and circulated listings of properties to prospective buyers and high-net-worth customers.</li>
+              <li>Closed sales and established a secured-lending portfolio of KES 30 million, supported by a robust pipeline.</li>
+            </ul>
+          </div>
         </details>
       </div>
     </div>
-    <p class="experience-note">Role descriptions are concise summaries of selected experience; individual appointments and programme engagements may have overlapping periods.</p>
+    <p class="experience-note">The periods above are shown as supplied. Some appointments overlap in the source history; the portfolio therefore presents each role separately rather than implying a single, uninterrupted sequence. The end date for Keystone Capital was not provided. The USD asset-book growth figure supplied for FACTS Africa contained an unclear extra zero and has been left out pending confirmation.</p>
+  </div>
+</section>
+
+<!-- SIGNATURE PROJECTS: selected, anonymised evidence of work and transactions -->
+<section id="projects" class="projects-section">
+  <div class="section-inner">
+    <div class="section-label">Selected Work & Transaction Experience</div>
+    <div class="projects-heading">
+      <div>
+        <h2 class="section-title">Signature Projects & Transactions</h2>
+        <p class="intro">A selection of assignments and financing work that demonstrate how I apply commercial origination, credit judgement, partnership development and value-chain understanding.</p>
+      </div>
+      <div class="projects-note">These examples are presented at an anonymised level to respect client and programme confidentiality. They distinguish quantified portfolio outcomes from advisory, enterprise-support and partnership work.</div>
+    </div>
+
+    <div class="project-feature">
+      <div class="project-feature-mark">
+        <span class="project-index">01 / PORTFOLIO DEVELOPMENT</span>
+        <strong>USD 1.3M</strong>
+        <span>SME portfolio onboarded</span>
+      </div>
+      <div class="project-feature-copy">
+        <div class="project-kicker">Local fintech | SME origination</div>
+        <h3>Building an SME financing portfolio</h3>
+        <p>Onboarded a USD 1.3 million SME portfolio for a local fintech through financing opportunity origination and the development of SME relationships. The work demonstrates the ability to translate market opportunity into a defined financing pipeline and portfolio.</p>
+        <div class="project-tags"><span>SME origination</span><span>Portfolio development</span><span>Working capital</span></div>
+      </div>
+    </div>
+
+    <div class="project-cases">
+      <article class="project-case">
+        <div class="project-case-top"><span class="project-case-no">02 / ENTERPRISE DEVELOPMENT</span><span class="project-case-type">USAID KIM 1</span></div>
+        <h3>Women-led agribusiness support</h3>
+        <p>Supported more than 40 women-led and women-owned agricultural SMEs through training, mentorship and financing initiatives.</p>
+        <details>
+          <summary>Explore the engagement</summary>
+          <div class="project-detail">The work combined enterprise support with access-to-finance initiatives. It also included support for onboarding five new female-led clients. The focus was on strengthening business capability and improving the ability of participating enterprises to engage with financing opportunities.</div>
+        </details>
+      </article>
+
+      <article class="project-case">
+        <div class="project-case-top"><span class="project-case-no">03 / EXPORT VALUE CHAIN</span><span class="project-case-type">Northern Kenya</span></div>
+        <h3>Climate-smart meat-exporter solution</h3>
+        <p>SME appraisal and coaching, including work on a climate-smart meat-exporter solution targeting the UAE and Oman markets.</p>
+        <details>
+          <summary>Explore the engagement</summary>
+          <div class="project-detail">The assignment involved appraisal and coaching within an agricultural value chain, alongside work on a climate-smart enterprise solution for a meat exporter targeting international markets. The work brought together enterprise assessment, value-chain understanding and export-market considerations.</div>
+        </details>
+      </article>
+
+      <article class="project-case">
+        <div class="project-case-top"><span class="project-case-no">04 / IMPACT MEASUREMENT</span><span class="project-case-type">Western Uganda</span></div>
+        <h3>Agricultural producer-group impact mapping</h3>
+        <p>Partnership work involving social-impact mapping and monitoring across cocoa, soya and coffee producer groups.</p>
+        <details>
+          <summary>Explore the engagement</summary>
+          <div class="project-detail">Worked with partners on social-impact mapping and monitoring across agricultural producer groups in western Uganda. The engagement involved producer-group and value-chain perspectives, supporting a clearer understanding of social-impact outcomes.</div>
+        </details>
+      </article>
+
+      <article class="project-case">
+        <div class="project-case-top"><span class="project-case-no">05 / TRADE & SUPPLIER FINANCE</span><span class="project-case-type">Transaction experience</span></div>
+        <h3>Export-trade and SME supplier financing</h3>
+        <p>Structured USD 1.8 million in LC discounting at UBA and, separately, helped unlock KES 60 million for SME suppliers through an Equity Bank ecosystem-banking pilot.</p>
+        <details>
+          <summary>Explore the experience</summary>
+          <div class="project-detail">These are separate achievements across different employers and periods. The USD 1.8 million figure relates to LC discounting structured at UBA to fund a flower exporter's working capital. The KES 60 million relates to supplier finance unlocked for SMEs supplying two bread manufacturers in an Equity Bank pilot. Separately, the UBA trade-product portfolio was built to USD 18 million.</div>
+        </details>
+      </article>
+    </div>
+
+    <p class="project-caveat">The summaries describe selected contributions and experience. They do not imply that every assignment resulted in a funded transaction or that all portfolio figures relate to the same institution or period.</p>
   </div>
 </section>
 
