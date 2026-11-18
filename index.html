@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teresa Wabwire | SME Finance, Credit & Risk Executive</title>
-<meta name="description" content="Professional portfolio of Teresa Wabwire, a senior SME finance, credit risk, strategic business development and investment professional based in Kenya.">
+<meta name="description" content="Teresa Wabwire's professional portfolio: SME finance, strategic business development, credit and risk management, working-capital finance and enterprise partnerships.">
+<meta name="theme-color" content="#003820">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Teresa Wabwire | SME Finance, Credit & Risk Executive">
+<meta property="og:description" content="Experience across SME finance, structured working capital, credit risk, strategic partnerships and inclusive enterprise development.">
 <style>
 :root{
   --green:#003820;--leaf:#106840;--fresh:#189040;--gold:#B8860B;--gold-light:#D9BD70;
@@ -48,6 +52,21 @@ nav a:hover{color:var(--gold-light)}
 .stat:last-child{border-right:0}
 .stat strong{display:block;color:var(--green);font-size:clamp(25px,3vw,34px);line-height:1.25}
 .stat span{display:block;color:var(--grey);font-size:12px;line-height:1.5;margin-top:7px}
+
+/* AUDIENCE PATHWAYS: help different visitors find relevant evidence quickly */
+.audience-section{padding:38px 8%;background:#fff;border-bottom:1px solid var(--line)}
+.audience-inner{max-width:1140px;margin:auto}
+.audience-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:18px}
+.audience-heading h2{font-size:19px;line-height:1.3;color:var(--green)}
+.audience-heading p{max-width:520px;color:var(--grey);font-size:12px;line-height:1.65}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.audience-card{display:flex;flex-direction:column;min-height:155px;padding:19px 20px;border:1px solid var(--line);border-left:3px solid var(--leaf);background:var(--light);text-decoration:none}
+.audience-card:hover{border-left-color:var(--gold);background:var(--pale);transform:translateY(-2px)}
+.audience-kicker{font-size:10px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.audience-card h3{font-size:15px;line-height:1.35;color:var(--green);margin-bottom:7px}
+.audience-card p{font-size:12px;line-height:1.65;color:var(--grey);flex:1}
+.audience-card span{font-size:11px;font-weight:700;color:var(--leaf);margin-top:12px}
+.metric-note{max-width:1140px;margin:13px auto 0;text-align:center;color:var(--grey);font-size:11px;line-height:1.5}
 
 /* COMMON SECTION FRAME */
 section{padding:74px 8%}
@@ -209,7 +228,17 @@ footer span{color:var(--gold-light)}
   .amanzi-lead{gap:28px}
   section{padding:64px 7%}
 }
+@media(max-width:900px){
+  .audience-section{padding:32px 7%}
+  .audience-grid{grid-template-columns:repeat(3,1fr)}
+  .audience-card{padding:16px 14px}
+}
 @media(max-width:650px){
+  .audience-section{padding:28px 7%}
+  .audience-heading{display:block}
+  .audience-heading p{margin-top:7px}
+  .audience-grid{grid-template-columns:1fr;gap:10px}
+  .audience-card{min-height:0;padding:16px}
   nav{padding:15px 6%;align-items:flex-start;flex-direction:column}
   .nav-links{gap:11px 15px}
   nav a{font-size:12px}
@@ -287,7 +316,38 @@ footer span{color:var(--gold-light)}
     <div class="stat"><strong>KES 60M</strong><span>SME Supplier Financing Unlocked</span></div>
     <div class="stat"><strong>40+</strong><span>Women-led Agribusinesses Supported</span></div>
   </div>
+  <p class="metric-note">These figures describe separate areas of professional experience and are presented independently.</p>
 </div>
+
+<!-- VISITOR PATHWAYS: guide employers, financial institutions and development partners -->
+<section class="audience-section" aria-label="Explore the portfolio by area of interest">
+  <div class="audience-inner">
+    <div class="audience-heading">
+      <h2>Explore by area of interest</h2>
+      <p>Different visitors may be looking for different evidence. These pathways point to the sections most relevant to your interests.</p>
+    </div>
+    <div class="audience-grid">
+      <a class="audience-card" href="#experience">
+        <div class="audience-kicker">For employers & boards</div>
+        <h3>Leadership and business growth</h3>
+        <p>Explore commercial leadership, business development, relationship management and credit experience.</p>
+        <span>View career experience →</span>
+      </a>
+      <a class="audience-card" href="#expertise">
+        <div class="audience-kicker">For financial institutions & investors</div>
+        <h3>Credit, capital and partnerships</h3>
+        <p>Explore working-capital finance, transaction assessment, portfolio risk and financing partnerships.</p>
+        <span>View core capabilities →</span>
+      </a>
+      <a class="audience-card" href="#impact">
+        <div class="audience-kicker">For development & value-chain partners</div>
+        <h3>Enterprise and inclusive growth</h3>
+        <p>Explore agricultural SME support, women-led enterprise initiatives and value-chain partnerships.</p>
+        <span>View selected impact →</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT: editorial profile -->
 <section id="about">
@@ -412,8 +472,8 @@ footer span{color:var(--gold-light)}
       <div class="impact-feature-number"><strong>USD 1.3M</strong><span>SME portfolio onboarded</span></div>
       <div class="impact-feature-copy">
         <h3>Building an SME Financing Portfolio</h3>
-        <p>Onboarded an SME portfolio for a local fintech, drawing on relationship development and working-capital finance experience to identify financing opportunities and bring SME business into the portfolio.</p>
-        <details><summary>Read the achievement context</summary><div class="impact-extra">This example demonstrates the ability to identify financing opportunities, develop business relationships and translate commercial prospects into a defined SME portfolio.</div></details>
+        <p>Onboarded a USD 1.3 million SME portfolio for a local fintech by identifying financing opportunities and developing business relationships with SMEs.</p>
+        <details><summary>Read the achievement context</summary><div class="impact-extra">The portfolio reflects work in SME origination and relationship development, translating identified financing needs into a defined book of business for a local fintech. This USD 1.3 million portfolio is separate from the export-trade and supplier-financing figures shown in the homepage indicators.</div></details>
       </div>
     </div>
 
