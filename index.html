@@ -23,6 +23,8 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:85px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.7;background:var(--white);overflow-x:hidden}
 a{transition:all .2s ease}
 .container{width:min(1140px,100%);margin:0 auto}
@@ -81,6 +83,69 @@ section{padding:72px 8%}
 .card h3{font-size:17px;line-height:1.4;color:var(--green);margin-bottom:10px}
 .card p{font-size:13px;line-height:1.8;color:var(--grey)}
 .card-kicker{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+
+
+/* INTERACTIVE, EXPANDABLE CONTENT */
+.expandable{padding:0;overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease}
+.expandable:hover{border-color:#B8CDBD;box-shadow:var(--shadow)}
+.expandable>summary{display:block;list-style:none;cursor:pointer;position:relative;padding:25px 52px 25px 25px}
+.expandable>summary::-webkit-details-marker{display:none}
+.expandable>summary::after{content:"＋";position:absolute;right:22px;top:22px;color:var(--gold);font-size:21px;font-weight:400;line-height:1}
+.expandable[open]>summary::after{content:"−"}
+.expandable>summary:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.expandable>summary h3{padding-right:8px}
+.read-more{display:inline-block;margin-top:13px;color:var(--leaf);font-weight:700;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+.expandable[open]>summary .read-more{color:var(--gold)}
+.read-more .less{display:none}
+.expandable[open]>summary .read-more .more{display:none}
+.expandable[open]>summary .read-more .less{display:inline}
+.expanded-content{border-top:1px solid var(--line);padding:20px 25px 24px;background:#FBFCFB}
+.expanded-content h4{color:var(--green);font-size:13px;margin-bottom:9px}
+.expanded-content p{font-size:13px;line-height:1.8;color:var(--grey);margin-bottom:10px}
+.expanded-content ul{padding-left:18px;color:var(--grey);font-size:13px;line-height:1.8}
+.expanded-content li{margin:4px 0}
+.profile-more{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.profile-more summary{cursor:pointer;color:var(--leaf);font-size:13px;font-weight:700;list-style:none}
+.profile-more summary::-webkit-details-marker{display:none}
+.profile-more summary::after{content:"＋";margin-left:9px;color:var(--gold);font-size:17px}
+.profile-more[open] summary::after{content:"−"}
+.profile-more .profile-extra{padding-top:12px}
+.experience-card.expandable{padding:0}
+.experience-card.expandable>summary{padding:23px 48px 22px 25px}
+.experience-card.expandable .expanded-content{padding:17px 25px 22px 28px}
+.experience-card.expandable .expanded-content ul{margin-top:7px}
+.impact-card.expandable{padding:0;display:block}
+.impact-card.expandable>summary{display:grid;grid-template-columns:105px 1fr;gap:18px;align-items:start;padding:25px 48px 22px 25px;list-style:none;cursor:pointer;position:relative}
+.impact-card.expandable>summary::-webkit-details-marker{display:none}
+.impact-card.expandable>summary::after{content:"＋";position:absolute;right:20px;top:20px;color:var(--gold);font-size:20px}
+.impact-card.expandable[open]>summary::after{content:"−"}
+.impact-card.expandable>summary:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.impact-card.expandable .expanded-content{padding:0 25px 23px 148px}
+.impact-card.expandable .expanded-content p:last-child{margin-bottom:0}
+.amanzi-expand{border:1px solid rgba(217,189,112,.55);padding:0;background:rgba(255,255,255,.045)}
+.amanzi-expand>summary{display:block;list-style:none;cursor:pointer;position:relative;padding:27px 52px 25px 27px}
+.amanzi-expand>summary::-webkit-details-marker{display:none}
+.amanzi-expand>summary::after{content:"＋";position:absolute;right:22px;top:23px;color:var(--gold-light);font-size:22px}
+.amanzi-expand[open]>summary::after{content:"−"}
+.amanzi-expand>summary:focus-visible{outline:3px solid var(--gold-light);outline-offset:-4px}
+.amanzi-expand .wordmark{font-size:22px;font-weight:700;letter-spacing:2px;color:var(--white);margin-bottom:5px}
+.amanzi-expand .submark{color:var(--gold-light);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.amanzi-expand .amanzi-teaser{font-size:13px;color:#E1ECE4;line-height:1.75}
+.amanzi-expand .read-more{color:var(--gold-light)}
+.amanzi-expand .expanded-content{background:rgba(255,255,255,.035);border-top:1px solid rgba(255,255,255,.18);padding:20px 27px 25px}
+.amanzi-expand .expanded-content h4{color:var(--gold-light)}
+.amanzi-expand .expanded-content p,.amanzi-expand .expanded-content li{color:#E1ECE4}
+.amanzi-expand .expanded-content ul{padding-left:18px}
+.card.expandable .expanded-content{min-height:100%}
+.disclosure-hint{margin-top:12px;color:var(--grey);font-size:12px}
+@media(max-width:650px){
+  .impact-card.expandable>summary{grid-template-columns:1fr;gap:7px;padding:20px 48px 18px 20px}
+  .impact-card.expandable .expanded-content{padding:0 20px 20px}
+  .experience-card.expandable>summary{padding:20px 48px 18px 22px}
+  .experience-card.expandable .expanded-content{padding:16px 22px 20px}
+  .amanzi-expand>summary{padding:23px 48px 21px 22px}
+  .amanzi-expand .expanded-content{padding:18px 22px 22px}
+}
 
 /* SELECTED EXPERIENCE */
 .experience-intro{max-width:830px;color:var(--grey);font-size:15px;line-height:1.85}
@@ -209,9 +274,14 @@ footer span{color:var(--gold-light)}
     <div class="profile-layout">
       <div class="profile-copy">
         <p>I am a business development, structured finance and risk management executive with over 18 years of experience building commercial portfolios, originating and structuring financing transactions, strengthening credit governance and developing strategic partnerships across Kenya's banking, fintech, SME finance and agribusiness sectors.</p>
-        <p>My experience spans corporate and SME banking, trade finance, invoice discounting, factoring, supply chain finance and impact lending. I have built and managed business portfolios, led commercial and credit functions, structured working capital solutions and developed partnerships involving development finance institutions, guarantee providers, insurers and strategic commercial partners.</p>
-        <p>I bring a combination of commercial leadership and credit expertise, with a practical understanding of how capital moves through businesses and value chains. My work has included supporting SME suppliers, agricultural exporters and underserved enterprises to connect with markets, capital and institutional support.</p>
-        <p>My leadership approach is grounded in commercial discipline, sound risk judgement, strategic execution and measurable outcomes. I am particularly interested in opportunities that bring together enterprise growth, investment mobilisation, financial innovation and inclusive economic development.</p>
+        <details class="profile-more">
+          <summary>Read the full executive profile</summary>
+          <div class="profile-extra">
+            <p>My experience spans corporate and SME banking, trade finance, invoice discounting, factoring, supply chain finance and impact lending. I have built and managed business portfolios, led commercial and credit functions, structured working capital solutions and developed partnerships involving development finance institutions, guarantee providers, insurers and strategic commercial partners.</p>
+            <p>I bring a combination of commercial leadership and credit expertise, with a practical understanding of how capital moves through businesses and value chains. My work has included supporting SME suppliers, agricultural exporters and underserved enterprises to connect with markets, capital and institutional support.</p>
+            <p>My leadership approach is grounded in commercial discipline, sound risk judgement, strategic execution and measurable outcomes. I am particularly interested in opportunities that bring together enterprise growth, investment mobilisation, financial innovation and inclusive economic development.</p>
+          </div>
+        </details>
       </div>
       <aside class="profile-aside">
         <h3>What I Bring</h3>
@@ -231,13 +301,15 @@ footer span{color:var(--gold-light)}
   <div class="section-inner">
     <div class="section-label">Core Capabilities</div>
     <h2 class="section-title">Areas of Expertise</h2>
+    <p class="intro">A selection of capabilities developed across banking, fintech, SME finance and development-oriented enterprise work.</p>
+    <p class="disclosure-hint">Select a capability to explore the areas it covers.</p>
     <div class="grid">
-      <article class="card"><div class="card-kicker">01 / Risk</div><h3>Credit & Risk Management</h3><p>Credit appraisal, financial analysis, portfolio monitoring, risk assessment, facility structuring and credit strategy.</p></article>
-      <article class="card"><div class="card-kicker">02 / Growth</div><h3>Strategic Business Development</h3><p>Market development, revenue growth, client acquisition, strategic planning and institutional relationship management.</p></article>
-      <article class="card"><div class="card-kicker">03 / Finance</div><h3>SME & Working Capital Finance</h3><p>Invoice discounting, supply chain finance, trade finance, SME lending and innovative working capital solutions.</p></article>
-      <article class="card"><div class="card-kicker">04 / Impact</div><h3>Development & Impact Finance</h3><p>DFI partnerships, financial inclusion, impact-oriented financing, agricultural value chains and enterprise development.</p></article>
-      <article class="card"><div class="card-kicker">05 / Partnerships</div><h3>Investment & Partnerships</h3><p>Investment origination, financing partnerships, stakeholder engagement and commercial opportunity development.</p></article>
-      <article class="card"><div class="card-kicker">06 / Leadership</div><h3>Leadership & Strategy</h3><p>Team leadership, organisational strategy, business execution, decision-making and performance management.</p></article>
+      <details class="card expandable"><summary><div class="card-kicker">01 / Risk</div><h3>Credit & Risk Management</h3><p>Credit appraisal, financial analysis, portfolio monitoring, risk assessment, facility structuring and credit strategy.</p><span class="read-more"><span class="more">Explore capability</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Areas of practice</h4><ul><li>Review of borrower financial position, cash flow and repayment capacity.</li><li>Credit assessment and working-capital facility structuring.</li><li>Portfolio monitoring, risk identification and mitigation.</li><li>Credit governance and commercially disciplined decision-making.</li></ul></div></details>
+      <details class="card expandable"><summary><div class="card-kicker">02 / Growth</div><h3>Strategic Business Development</h3><p>Market development, revenue growth, client acquisition, strategic planning and institutional relationship management.</p><span class="read-more"><span class="more">Explore capability</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Areas of practice</h4><ul><li>Identifying markets, client segments and financing opportunities.</li><li>Building and managing institutional and commercial relationships.</li><li>Developing business propositions and partnership-led growth.</li><li>Linking commercial strategy to execution and portfolio performance.</li></ul></div></details>
+      <details class="card expandable"><summary><div class="card-kicker">03 / Finance</div><h3>SME & Working Capital Finance</h3><p>Invoice discounting, supply chain finance, trade finance, SME lending and innovative working capital solutions.</p><span class="read-more"><span class="more">Explore capability</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Areas of practice</h4><ul><li>Invoice discounting, factoring and receivables-based finance.</li><li>Purchase-order and transaction-based SME financing models.</li><li>Supply-chain and reverse-factoring structures.</li><li>Trade-related working capital and financing solutions for businesses.</li></ul></div></details>
+      <details class="card expandable"><summary><div class="card-kicker">04 / Impact</div><h3>Development & Impact Finance</h3><p>DFI partnerships, financial inclusion, impact-oriented financing, agricultural value chains and enterprise development.</p><span class="read-more"><span class="more">Explore capability</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Areas of practice</h4><ul><li>Enterprise support and financing initiatives for underserved SMEs.</li><li>Agricultural value-chain development and producer-group engagement.</li><li>Partnerships involving development programmes and impact objectives.</li><li>Connecting commercial viability with inclusive economic outcomes.</li></ul></div></details>
+      <details class="card expandable"><summary><div class="card-kicker">05 / Partnerships</div><h3>Investment & Partnerships</h3><p>Investment origination, financing partnerships, stakeholder engagement and commercial opportunity development.</p><span class="read-more"><span class="more">Explore capability</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Areas of practice</h4><ul><li>Building relationships with financiers, guarantee providers, insurers and commercial partners.</li><li>Developing financing propositions and partnership opportunities.</li><li>Engaging institutional stakeholders around SME and value-chain finance.</li><li>Supporting the connection between enterprise demand and appropriate capital.</li></ul></div></details>
+      <details class="card expandable"><summary><div class="card-kicker">06 / Leadership</div><h3>Leadership & Strategy</h3><p>Team leadership, organisational strategy, business execution, decision-making and performance management.</p><span class="read-more"><span class="more">Explore capability</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Areas of practice</h4><ul><li>Setting commercial priorities and translating strategy into execution.</li><li>Leading business development and credit-related work.</li><li>Balancing growth objectives with risk discipline.</li><li>Using performance information to guide decisions and delivery.</li></ul></div></details>
     </div>
   </div>
 </section>
@@ -247,27 +319,12 @@ footer span{color:var(--gold-light)}
     <div class="section-label">Career & Leadership</div>
     <h2 class="section-title">Selected Professional Experience</h2>
     <p class="experience-intro">My experience spans banking, financial technology, SME financing and development-oriented enterprise finance. The engagements below are grouped by organisation and area of contribution rather than presented as a strict chronological sequence.</p>
+    <p class="disclosure-hint">Open an experience card to see a fuller description of the work and areas of contribution.</p>
     <div class="experience-grid">
-      <article class="experience-card">
-        <h3>SME Business Development & Credit Management</h3>
-        <p class="organisation">Kuza Factors | Current Professional Experience</p>
-        <p>Working capital financing, SME origination, credit assessment, portfolio risk and financing solutions for growing enterprises.</p>
-      </article>
-      <article class="experience-card">
-        <h3>Fintech & Working Capital Finance</h3>
-        <p class="organisation">Wareflow Technologies</p>
-        <p>Experience in innovative SME financing, transaction-based financing models, business development and credit risk.</p>
-      </article>
-      <article class="experience-card">
-        <h3>Development Finance & Agribusiness Partnerships</h3>
-        <p class="organisation">FACTS Africa and Development Finance Programmes</p>
-        <p>SME financing, agricultural value-chain development, women-led enterprise support, impact partnerships and financial inclusion initiatives.</p>
-      </article>
-      <article class="experience-card">
-        <h3>Banking & Relationship Management</h3>
-        <p class="organisation">Kenyan Banking Sector</p>
-        <p>Over a decade of banking experience across relationship management, business development, credit and financial services.</p>
-      </article>
+      <details class="experience-card expandable"><summary><h3>SME Business Development & Credit Management</h3><p class="organisation">Kuza Factors | Current Professional Experience</p><p>Working capital financing, SME origination, credit assessment, portfolio risk and financing solutions for growing enterprises.</p><span class="read-more"><span class="more">View experience</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Focus areas</h4><ul><li>SME client origination and financing opportunity assessment.</li><li>Credit appraisal and working-capital facility analysis.</li><li>Portfolio risk, repayment capacity and transaction considerations.</li><li>Financing solutions for businesses operating in supply chains and trade.</li></ul></div></details>
+      <details class="experience-card expandable"><summary><h3>Fintech & Working Capital Finance</h3><p class="organisation">Wareflow Technologies</p><p>Experience in innovative SME financing, transaction-based financing models, business development and credit risk.</p><span class="read-more"><span class="more">View experience</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Focus areas</h4><ul><li>SME-to-SME purchase-order and invoice-based financing models.</li><li>Business development and working-capital opportunity origination.</li><li>Credit and risk considerations for transaction-led finance.</li><li>Developing financing approaches around commercial transactions.</li></ul></div></details>
+      <details class="experience-card expandable"><summary><h3>Development Finance & Agribusiness Partnerships</h3><p class="organisation">FACTS Africa and Development Finance Programmes</p><p>SME financing, agricultural value-chain development, women-led enterprise support, impact partnerships and financial inclusion initiatives.</p><span class="read-more"><span class="more">View experience</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Selected areas of contribution</h4><ul><li>Supporting women-led and women-owned agricultural SMEs through training, mentorship and financing initiatives.</li><li>SME appraisal and coaching within agricultural value chains.</li><li>Work on climate-smart enterprise solutions, including a meat exporter targeting the UAE and Oman markets.</li><li>Partnership work involving social-impact mapping and monitoring across cocoa, soya and coffee producer groups in western Uganda.</li></ul></div></details>
+      <details class="experience-card expandable"><summary><h3>Banking & Relationship Management</h3><p class="organisation">Kenyan Banking Sector</p><p>Over a decade of banking experience across relationship management, business development, credit and financial services.</p><span class="read-more"><span class="more">View experience</span><span class="less">Show less</span></span></summary><div class="expanded-content"><h4>Professional foundation</h4><ul><li>Relationship and account management across banking clients.</li><li>Business development, client portfolio growth and financial services.</li><li>Exposure to SME and corporate banking, credit and trade-related finance.</li><li>Practical experience balancing client needs, business growth and credit discipline.</li></ul></div></details>
     </div>
     <p class="experience-note">Role descriptions are concise summaries of selected experience; individual appointments and programme engagements may have overlapping periods.</p>
   </div>
@@ -278,23 +335,12 @@ footer span{color:var(--gold-light)}
     <div class="section-label">Selected Results</div>
     <h2 class="section-title">Evidence of Commercial & Development Impact</h2>
     <p class="intro">Selected examples of portfolio development, enterprise support and value-chain work across SME finance and development programmes.</p>
+    <p class="disclosure-hint">Select a result to read the context behind the work.</p>
     <div class="impact-grid">
-      <article class="impact-card">
-        <div class="impact-number">USD 1.3M</div>
-        <div><h3>SME Portfolio Development</h3><p>Onboarded an SME portfolio for a local fintech, applying relationship development and working-capital finance experience to expand access to funding.</p></div>
-      </article>
-      <article class="impact-card">
-        <div class="impact-number">40+</div>
-        <div><h3>Women-led Agribusinesses</h3><p>Supported women-led and women-owned agricultural SMEs through training, mentorship and financing initiatives under the USAID KIM 1 programme.</p></div>
-      </article>
-      <article class="impact-card">
-        <div class="impact-number">UAE<br>+ Oman</div>
-        <div><h3>Climate-smart Export Solutions</h3><p>Contributed to SME appraisal and coaching, including work on a climate-smart meat-exporter solution targeting regional export markets.</p></div>
-      </article>
-      <article class="impact-card">
-        <div class="impact-number">East<br>Africa</div>
-        <div><h3>Agricultural Value-chain Partnerships</h3><p>Worked with partners on social-impact mapping and monitoring across cocoa, soya and coffee producer groups in western Uganda.</p></div>
-      </article>
+      <details class="impact-card expandable"><summary><div class="impact-number">USD 1.3M</div><div><h3>SME Portfolio Development</h3><p>Onboarded an SME portfolio for a local fintech.</p><span class="read-more"><span class="more">Explore result</span><span class="less">Show less</span></span></div></summary><div class="expanded-content"><p>The portfolio-building work drew on relationship development and working-capital finance experience to bring SME business into a local fintech's financing portfolio.</p><p>This example demonstrates the ability to identify financing opportunities and translate business relationships into a defined SME portfolio.</p></div></details>
+      <details class="impact-card expandable"><summary><div class="impact-number">40+</div><div><h3>Women-led Agribusinesses</h3><p>Supported through training, mentorship and financing initiatives.</p><span class="read-more"><span class="more">Explore result</span><span class="less">Show less</span></span></div></summary><div class="expanded-content"><p>Under the USAID KIM 1 programme, supported more than 40 women-led and women-owned agricultural SMEs through training, mentorship and financing initiatives.</p><p>The work focused on helping participating enterprises strengthen their business capabilities and access finance.</p></div></details>
+      <details class="impact-card expandable"><summary><div class="impact-number">UAE<br>+ Oman</div><div><h3>Climate-smart Export Solutions</h3><p>SME appraisal and coaching, including work on a climate-smart meat-exporter solution.</p><span class="read-more"><span class="more">Explore result</span><span class="less">Show less</span></span></div></summary><div class="expanded-content"><p>Contributed to SME appraisal and coaching in northern Kenya, including work on a climate-smart meat-exporter solution targeting the UAE and Oman markets.</p><p>This work brought together enterprise assessment, value-chain understanding and export-market considerations.</p></div></details>
+      <details class="impact-card expandable"><summary><div class="impact-number">East<br>Africa</div><div><h3>Agricultural Value-chain Partnerships</h3><p>Social-impact mapping and monitoring across cocoa, soya and coffee producer groups.</p><span class="read-more"><span class="more">Explore result</span><span class="less">Show less</span></span></div></summary><div class="expanded-content"><p>Worked with partners on social-impact mapping and monitoring across cocoa, soya and coffee producer groups in western Uganda.</p><p>This involved engagement with agricultural value chains and the use of impact information to understand producer-group outcomes.</p></div></details>
     </div>
   </div>
 </section>
@@ -309,15 +355,24 @@ footer span{color:var(--gold-light)}
       <p>Through HELA, a technology-enabled producer intelligence and risk-visibility initiative in development, the ambition is to make enterprise activity more visible to lenders and value-chain partners, strengthen decision-useful information and help connect viable businesses with appropriate capital and risk-sharing support.</p>
       <p>This work brings together my experience in credit, value-chain finance, partnerships and inclusive enterprise development.</p>
     </div>
-    <div class="amanzi-mark">
-      <div class="wordmark">AMANZI AFRICA</div>
-      <div class="submark">Enterprise visibility. Better decisions. Wider access.</div>
-      <div class="amanzi-pillars">
-        <div class="amanzi-pillar"><strong>Producer visibility</strong><span>Structured enterprise profiles and more reliable producer information.</span></div>
-        <div class="amanzi-pillar"><strong>Risk intelligence</strong><span>Useful insight into enterprise activity, value chains and financing readiness.</span></div>
-        <div class="amanzi-pillar"><strong>Capital connectivity</strong><span>Stronger links among enterprises, financiers and value-chain partners.</span></div>
+    <details class="amanzi-mark amanzi-expand">
+      <summary>
+        <div class="wordmark">AMANZI AFRICA</div>
+        <div class="submark">Enterprise visibility. Better decisions. Wider access.</div>
+        <p class="amanzi-teaser">Explore the HELA concept: a producer-intelligence and risk-visibility initiative being developed to help make underserved agricultural enterprises more visible to financiers and value-chain partners.</p>
+        <span class="read-more"><span class="more">Explore Amanzi Africa & HELA</span><span class="less">Show less</span></span>
+      </summary>
+      <div class="expanded-content">
+        <h4>The HELA proposition</h4>
+        <p>HELA is being developed as a technology-enabled producer intelligence and risk-visibility initiative. Its ambition is to organise useful enterprise information, strengthen the quality of information available for decisions and help connect viable businesses with appropriate capital and risk-sharing support.</p>
+        <div class="amanzi-pillars">
+          <div class="amanzi-pillar"><strong>Producer visibility</strong><span>Structured enterprise profiles and more reliable producer information.</span></div>
+          <div class="amanzi-pillar"><strong>Risk intelligence</strong><span>Useful insight into enterprise activity, value chains and financing readiness.</span></div>
+          <div class="amanzi-pillar"><strong>Capital connectivity</strong><span>Stronger links among enterprises, financiers and value-chain partners.</span></div>
+        </div>
+        <p style="margin-top:16px">The broader ambition is to support better-informed financing and partnership decisions across agricultural value chains.</p>
       </div>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -325,11 +380,12 @@ footer span{color:var(--gold-light)}
   <div class="section-inner">
     <div class="section-label">Education & Professional Development</div>
     <h2 class="section-title">Qualifications & Training</h2>
+    <p class="disclosure-hint">Open each item for more information about the learning area.</p>
     <div class="grid">
-      <article class="card"><h3>Academic Background</h3><p>BSc Horticulture. Postgraduate studies.</p></article>
-      <article class="card"><h3>Agro Credit Finance</h3><p>International Learning Programme in Agro Credit Finance, with exposure to impact financing and ESG in rural agricultural SMEs.</p></article>
-      <article class="card"><h3>Ecosystem Banking & Trade Finance</h3><p>Professional training in ecosystem banking, agricultural value chains and trade financing.</p></article>
-      <article class="card"><h3>Supply Chain Finance</h3><p>Factor Chain International certification in Supply Chain Financing and Reverse Factoring.</p></article>
+      <details class="card expandable"><summary><h3>Academic Background</h3><p>BSc Horticulture and postgraduate studies.</p><span class="read-more"><span class="more">View details</span><span class="less">Show less</span></span></summary><div class="expanded-content"><p>Academic qualification: Bachelor of Science in Horticulture.</p><p>Postgraduate studies.</p></div></details>
+      <details class="card expandable"><summary><h3>Agro Credit Finance</h3><p>International learning in agro credit finance, impact financing and ESG in rural agricultural SMEs.</p><span class="read-more"><span class="more">View details</span><span class="less">Show less</span></span></summary><div class="expanded-content"><p>Training through an international learning programme in agro credit finance, with exposure to impact financing and environmental, social and governance considerations for rural agricultural SMEs.</p></div></details>
+      <details class="card expandable"><summary><h3>Ecosystem Banking & Trade Finance</h3><p>Professional training in ecosystem banking, agricultural value chains and trade financing.</p><span class="read-more"><span class="more">View details</span><span class="less">Show less</span></span></summary><div class="expanded-content"><p>Learning focused on ecosystem banking and trade finance, including the role of agricultural value chains in shaping financing needs and opportunities.</p></div></details>
+      <details class="card expandable"><summary><h3>Supply Chain Finance</h3><p>Factor Chain International certification in Supply Chain Financing and Reverse Factoring.</p><span class="read-more"><span class="more">View details</span><span class="less">Show less</span></span></summary><div class="expanded-content"><p>Professional certification covering supply chain financing and reverse factoring.</p></div></details>
     </div>
   </div>
 </section>
