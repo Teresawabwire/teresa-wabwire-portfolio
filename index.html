@@ -3,441 +3,971 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teresa Wabwire | Credit, Risk & Business Development Executive</title>
-<meta name="description" content="Professional portfolio of Teresa Wabwire, a senior SME finance, credit risk, business development and investment professional based in Kenya.">
+
+<title>Teresa Wabwire | SME Finance, Credit & Risk Executive</title>
+
+<meta name="description" content="Professional portfolio of Teresa Wabwire, an SME finance, credit risk, strategic business development and investment professional based in Kenya.">
 
 <style>
 :root {
   --green: #003820;
   --leaf: #106840;
+  --fresh: #189040;
   --gold: #B8860B;
-  --sage: #EAF1EC;
+  --sage: #98C8A8;
+  --pale: #EAF1EC;
   --white: #ffffff;
   --dark: #202b25;
   --grey: #66736b;
+  --light: #f6f8f6;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--dark);
   line-height: 1.7;
   background: var(--white);
+  overflow-x: hidden;
 }
+
+a {
+  transition: all .2s ease;
+}
+
 nav {
   background: var(--green);
   color: white;
-  padding: 20px 8%;
+  padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 24px;
 }
-.brand { font-size: 20px; font-weight: bold; letter-spacing: 1px; }
-nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; }
-nav a:hover { color: #d9bd70; }
-.hero {
-  background: linear-gradient(120deg, #003820, #106840);
+
+nav a {
   color: white;
-  padding: 100px 10%;
+  text-decoration: none;
+  font-size: 14px;
 }
-.hero-content { max-width: 900px; }
+
+nav a:hover {
+  color: #d9bd70;
+}
+
+/* HOMEPAGE HERO */
+
+.hero {
+  background: linear-gradient(125deg, #003820 0%, #07512f 65%, #106840 100%);
+  color: white;
+  padding: 75px 8%;
+}
+
+.hero-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 55px;
+}
+
 .eyebrow {
   color: #d9bd70;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
-h1 { font-size: clamp(38px, 6vw, 65px); line-height: 1.15; margin-bottom: 22px; }
-.hero h2 { font-size: clamp(19px, 3vw, 26px); font-weight: 400; margin-bottom: 20px; }
-.hero p { max-width: 760px; color: #e5eee8; font-size: 17px; }
-.hero-buttons { margin-top: 32px; }
+
+.hero h1 {
+  font-size: clamp(40px, 5.5vw, 68px);
+  line-height: 1.08;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero h2 {
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 22px;
+  color: #dcebe0;
+}
+
+.hero-intro {
+  font-size: 17px;
+  color: #edf4ef;
+  max-width: 680px;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  font-size: 15px;
+  color: #d4e5d9;
+  max-width: 650px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
 .btn {
   display: inline-block;
-  padding: 12px 25px;
-  margin: 5px 10px 5px 0;
+  padding: 12px 21px;
   border: 1px solid #d9bd70;
   color: white;
   text-decoration: none;
   border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
 }
-.btn.gold { background: var(--gold); border-color: var(--gold); }
-section { padding: 75px 10%; }
+
+.btn:hover {
+  background: white;
+  color: var(--green);
+}
+
+.btn.gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+.btn.gold:hover {
+  background: #d09b19;
+  color: white;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.image-caption {
+  margin-top: 15px;
+  color: #d9bd70;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* ACHIEVEMENT INDICATORS */
+
+.stats {
+  background: var(--pale);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 35px 8%;
+  text-align: center;
+  border-bottom: 1px solid #dce7de;
+}
+
+.stat {
+  padding: 10px;
+}
+
+.stat strong {
+  display: block;
+  font-size: clamp(25px, 3vw, 34px);
+  color: var(--green);
+  line-height: 1.3;
+}
+
+.stat span {
+  display: block;
+  color: var(--grey);
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 75px 9%;
+}
+
+.section-inner {
+  max-width: 1150px;
+  margin: auto;
+}
+
 .section-label {
   color: var(--leaf);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   font-size: 12px;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-h2.section-title { font-size: 32px; color: var(--green); margin-bottom: 25px; }
-.intro { max-width: 850px; font-size: 17px; color: var(--grey); }
-.stats {
-  background: var(--sage);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 25px;
-  padding: 45px 10%;
-  text-align: center;
+
+.section-title {
+  font-size: clamp(27px, 3.5vw, 36px);
+  color: var(--green);
+  line-height: 1.25;
+  margin-bottom: 25px;
 }
-.stat strong { display: block; font-size: 32px; color: var(--green); }
-.stat span { color: var(--grey); font-size: 14px; }
+
+.intro {
+  max-width: 900px;
+  font-size: 16px;
+  color: var(--grey);
+  line-height: 1.9;
+}
+
+.soft {
+  background: var(--light);
+}
+
+/* EXPERTISE CARDS */
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-  margin-top: 30px;
+  margin-top: 32px;
 }
+
 .card {
-  padding: 28px;
+  padding: 27px;
   border: 1px solid #e2e9e3;
   border-top: 3px solid var(--leaf);
   background: white;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.card h3 { color: var(--green); margin-bottom: 12px; font-size: 19px; }
-.card p { color: var(--grey); font-size: 15px; }
-.soft { background: #f5f8f5; }
-ul { padding-left: 20px; color: var(--grey); }
-li { margin-bottom: 10px; }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0,56,32,.08);
+}
+
+.card h3 {
+  color: var(--green);
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.card p {
+  color: var(--grey);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* CAREER TIMELINE */
+
+.timeline {
+  margin-top: 35px;
+  max-width: 950px;
+}
+
 .experience {
   border-left: 3px solid var(--gold);
-  padding: 5px 0 25px 25px;
-  margin: 25px 0;
+  padding: 5px 0 30px 28px;
+  margin-left: 5px;
+  position: relative;
 }
-.experience h3 { color: var(--green); }
-.experience p { color: var(--grey); }
+
+.experience::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.experience h3 {
+  color: var(--green);
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.experience .organisation {
+  color: var(--leaf);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.experience p:last-child {
+  color: var(--grey);
+  font-size: 15px;
+  max-width: 800px;
+}
+
+/* TAGS */
+
 .tag {
   display: inline-block;
-  background: var(--sage);
+  background: var(--pale);
   color: var(--green);
-  padding: 6px 12px;
-  margin: 5px;
+  padding: 7px 13px;
+  margin: 5px 5px 5px 0;
   font-size: 13px;
   border-radius: 3px;
 }
+
+/* CONTACT */
+
 .contact {
   background: var(--green);
   color: white;
   text-align: center;
 }
-.contact h2 { color: white; }
-.contact p { color: #e1eae4; max-width: 650px; margin: auto; }
+
+.contact .section-inner {
+  max-width: 850px;
+}
+
+.contact .section-title {
+  color: white;
+}
+
+.contact .section-label {
+  color: #d9bd70;
+}
+
+.contact-intro {
+  color: #e1eae4;
+  max-width: 680px;
+  margin: auto;
+}
+
+.contact-details {
+  margin-top: 30px;
+  line-height: 2.5;
+}
+
+.contact-details a {
+  color: #d9bd70;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 footer {
   background: #002719;
   color: #c9d8ce;
   text-align: center;
-  padding: 25px;
+  padding: 25px 15px;
   font-size: 13px;
 }
-@media(max-width:650px) {
-  nav { padding: 18px 6%; }
-  nav a { margin: 0 8px 0 0; }
-  .hero { padding: 70px 7%; }
-  section { padding: 55px 7%; }
+
+footer span {
+  color: #d9bd70;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .hero-visual img {
+    height: 350px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding: 65px 7%;
+  }
+}
+
+@media(max-width: 650px) {
+  nav {
+    padding: 16px 6%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 55px 7%;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-visual img {
+    height: 300px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px 5%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 50px 7%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    text-align: center;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
   <div class="brand">TERESA WABWIRE</div>
-  <div>
+
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#experience">Experience</a>
+    <a href="#impact">Impact</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<h1>Teresa Wabwire</h1>
+<!-- HOMEPAGE -->
 
-    <h2>SME Finance | Strategic Business Development | Credit & Risk Management</h2>
+<header class="hero" id="top">
+  <div class="hero-inner">
 
-    <p class="hero-intro">
-      A business development, credit and risk management professional
-      with over 18 years of experience across banking, SME finance,
-      working capital solutions and development finance.
-    </p>
+    <div class="hero-content">
 
-    <p>
-      I build strategic partnerships, originate financing opportunities,
-      strengthen credit portfolios and develop innovative financial
-      solutions that connect businesses to capital and growth opportunities.
-    </p>
+      <div class="eyebrow">
+        Professional Portfolio | Kenya & International Markets
+      </div>
 
-    <div class="hero-buttons">
-      <a class="btn gold" href="#about">Explore My Profile</a>
-      <a class="btn" href="#contact">Professional Enquiries</a>
-      <a class="btn" href="Teresa_Nyangi_Wabwire_Executive_CV.pdf" target="_blank">
-        Download My CV
-      </a>
+      <h1>Teresa Wabwire</h1>
+
+      <h2>
+        Strategic Business Development, Credit & Risk Management Executive
+      </h2>
+
+      <p class="hero-intro">
+        SME Finance | Investment Mobilisation | Working Capital Solutions
+      </p>
+
+      <p class="hero-description">
+        A business development, credit and risk management professional
+        with over 18 years of experience across banking, SME finance,
+        working capital solutions and development finance.
+
+        I build strategic partnerships, originate financing opportunities,
+        strengthen credit portfolios and develop innovative financial
+        solutions that connect businesses to capital and growth opportunities.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn gold" href="#about">Explore My Profile</a>
+
+        <a class="btn" href="#contact">Professional Enquiries</a>
+
+        <a class="btn"
+           href="Teresa_Nyangi_Wabwire_Executive_CV.pdf"
+           target="_blank"
+           rel="noopener noreferrer">
+          Download My CV
+        </a>
+      </div>
+
     </div>
-  </div>
 
-  <div class="hero-visual">
-    <img src="Golden Baobab at Sunrise.png"
-         alt="Baobab tree representing resilience, growth and enduring impact">
-    <p>Rooted in experience. Focused on impact. Driven by growth.</p>
+    <div class="hero-visual">
+
+      <img
+        src="Golden Baobab at Sunrise.png"
+        alt="Golden baobab tree representing resilience, growth and enduring impact">
+
+      <p class="image-caption">
+        Rooted in experience. Focused on impact. Driven by growth.
+      </p>
+
+    </div>
+
   </div>
 </header>
-    <div class="eyebrow">Professional Portfolio | Kenya & International Markets</div>
-    <h1>Teresa Wabwire</h1>
-    <h2>Strategic Business Development, Credit & Risk Management Executive</h2>
-    <p>
-      Driving SME Growth, Investment Mobilisation and Financial Inclusion
-      through Strategic Partnerships, Credit Risk Management and
-      Innovative Financing Solutions.
-    </p>
- <div class="hero-buttons">
-  <a class="btn gold" href="#about">Explore My Profile</a>
-  <a class="btn" href="#contact">Professional Enquiries</a>
-  <a class="btn" href="Teresa_Nyangi_Wabwire_Executive_CV.pdf" target="_blank">Download My CV</a>
-</div>
-  </div>
-</header>
+
+<!-- PROFESSIONAL INDICATORS -->
 
 <div class="stats">
-  <div class="stat"><strong>18+</strong><span>Years of Professional Experience</span></div>
-  <div class="stat"><strong>USD 18M</strong><span>Export Trade Portfolio Experience</span></div>
-  <div class="stat"><strong>KES 600M</strong><span>SME Supplier Financing Unlocked</span></div>
-  <div class="stat"><strong>40+</strong><span>Women-led Agribusinesses Supported</span></div>
+
+  <div class="stat">
+    <strong>18+</strong>
+    <span>Years of Professional Experience</span>
+  </div>
+
+  <div class="stat">
+    <strong>USD 1.8M</strong>
+    <span>Export Trade Portfolio Experience</span>
+  </div>
+
+  <div class="stat">
+    <strong>KES 60M</strong>
+    <span>SME Supplier Financing Unlocked</span>
+  </div>
+
+  <div class="stat">
+    <strong>40+</strong>
+    <span>Women-led Agribusinesses Supported</span>
+  </div>
+
 </div>
 
+<!-- ABOUT -->
+
 <section id="about">
-  <div class="section-label">Professional Profile</div>
-  <h2 class="section-title">Executive Profile</h2>
-  <p class="intro">
-    I am a business development, structured finance and risk management executive with over 18 years of experience building commercial portfolios, originating and structuring financing transactions, strengthening credit governance and developing strategic partnerships across Kenya's banking, fintech, SME finance and agribusiness sectors.
 
-    <br><br>
+  <div class="section-inner">
 
-    My experience spans corporate and SME banking, trade finance, invoice discounting, factoring, supply chain finance and impact lending. I have built and managed business portfolios, led commercial and credit functions, structured working capital solutions, mobilised investment capital and developed risk-sharing frameworks involving development finance institutions, guarantee providers, insurers and strategic commercial partners.
+    <div class="section-label">Professional Profile</div>
 
-    <br><br>
+    <h2 class="section-title">Executive Profile</h2>
 
-    I bring a combination of commercial leadership and credit expertise, with a practical understanding of how capital moves through businesses and value chains. My work has included unlocking financing for SME suppliers, supporting agricultural exporters, developing financing models for underserved enterprises and establishing partnerships that connect businesses to markets, capital and institutional support.
+    <p class="intro">
+      I am a business development, structured finance and risk management
+      executive with over 18 years of experience building commercial
+      portfolios, originating and structuring financing transactions,
+      strengthening credit governance and developing strategic partnerships
+      across Kenya's banking, fintech, SME finance and agribusiness sectors.
 
-    <br><br>
+      <br><br>
 
-    My leadership approach is grounded in commercial discipline, sound risk judgement, strategic execution and measurable outcomes. I am particularly interested in opportunities that bring together enterprise growth, investment mobilisation, financial innovation and inclusive economic development.
+      My experience spans corporate and SME banking, trade finance,
+      invoice discounting, factoring, supply chain finance and impact lending.
+      I have built and managed business portfolios, led commercial and credit
+      functions, structured working capital solutions, mobilised investment
+      capital and developed risk-sharing frameworks involving development
+      finance institutions, guarantee providers, insurers and strategic
+      commercial partners.
 
-    <br><br>
+      <br><br>
 
-    As Founder and CEO of Amanzi Africa, I am also advancing solutions that address information and financing gaps affecting agricultural enterprises and underserved producers through technology-enabled market intelligence and enterprise support.
-  </p>
-</section>
-<section id="expertise" class="soft">
-  <div class="section-label">Core Capabilities</div>
-  <h2 class="section-title">Areas of Expertise</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Credit & Risk Management</h3>
-      <p>Credit appraisal, financial analysis, portfolio monitoring,
-      risk assessment, facility structuring and credit strategy.</p>
-    </div>
-    <div class="card">
-      <h3>Strategic Business Development</h3>
-      <p>Market development, revenue growth, client acquisition,
-      strategic planning and institutional relationship management.</p>
-    </div>
-    <div class="card">
-      <h3>SME & Working Capital Finance</h3>
-      <p>Invoice discounting, supply chain finance, trade finance,
-      SME lending and innovative working capital solutions.</p>
-    </div>
-    <div class="card">
-      <h3>Development & Impact Finance</h3>
-      <p>DFI partnerships, financial inclusion, impact-oriented
-      financing, agricultural value chains and enterprise development.</p>
-    </div>
-    <div class="card">
-      <h3>Investment & Partnerships</h3>
-      <p>Investment origination, financing partnerships, stakeholder
-      engagement and commercial opportunity development.</p>
-    </div>
-    <div class="card">
-      <h3>Leadership & Strategy</h3>
-      <p>Team leadership, organisational strategy, business execution,
-      decision-making and performance management.</p>
-    </div>
+      I bring a combination of commercial leadership and credit expertise,
+      with a practical understanding of how capital moves through businesses
+      and value chains. My work has included unlocking financing for SME
+      suppliers, supporting agricultural exporters, developing financing
+      models for underserved enterprises and establishing partnerships that
+      connect businesses to markets, capital and institutional support.
+
+      <br><br>
+
+      My leadership approach is grounded in commercial discipline, sound
+      risk judgement, strategic execution and measurable outcomes. I am
+      particularly interested in opportunities that bring together enterprise
+      growth, investment mobilisation, financial innovation and inclusive
+      economic development.
+
+      <br><br>
+
+      As Founder and CEO of Amanzi Africa, I am also advancing solutions
+      that address information and financing gaps affecting agricultural
+      enterprises and underserved producers through technology-enabled
+      market intelligence and enterprise support.
+    </p>
+
   </div>
+
 </section>
+
+<!-- EXPERTISE -->
+
+<section id="expertise" class="soft">
+
+  <div class="section-inner">
+
+    <div class="section-label">Core Capabilities</div>
+
+    <h2 class="section-title">Areas of Expertise</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Credit & Risk Management</h3>
+        <p>
+          Credit appraisal, financial analysis, portfolio monitoring,
+          risk assessment, facility structuring and credit strategy.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Strategic Business Development</h3>
+        <p>
+          Market development, revenue growth, client acquisition,
+          strategic planning and institutional relationship management.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>SME & Working Capital Finance</h3>
+        <p>
+          Invoice discounting, supply chain finance, trade finance,
+          SME lending and innovative working capital solutions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Development & Impact Finance</h3>
+        <p>
+          DFI partnerships, financial inclusion, impact-oriented
+          financing, agricultural value chains and enterprise development.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Investment & Partnerships</h3>
+        <p>
+          Investment origination, financing partnerships, stakeholder
+          engagement and commercial opportunity development.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Leadership & Strategy</h3>
+        <p>
+          Team leadership, organisational strategy, business execution,
+          decision-making and performance management.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
-  <div class="section-label">Career Journey</div>
-  <h2 class="section-title">Professional Experience</h2>
-  <p class="intro">
-    My career has evolved across traditional banking, financial
-    technology, SME financing and development-oriented enterprise finance.
-    This combination provides a practical understanding of both
-    institutional credit requirements and the financing challenges
-    faced by growing businesses.
-  </p>
 
-  <div class="experience">
-    <h3>SME Business Development & Credit Management</h3>
-    <p>Kuza Factors | Current professional experience</p>
-    <p>Working capital financing, SME origination, credit assessment,
-    portfolio risk and financing solutions for growing enterprises.</p>
+  <div class="section-inner">
+
+    <div class="section-label">Career Journey</div>
+
+    <h2 class="section-title">Professional Experience</h2>
+
+    <p class="intro">
+      My career has evolved across traditional banking, financial
+      technology, SME financing and development-oriented enterprise finance.
+      This combination provides a practical understanding of both
+      institutional credit requirements and the financing challenges
+      faced by growing businesses.
+    </p>
+
+    <div class="timeline">
+
+      <div class="experience">
+        <h3>SME Business Development & Credit Management</h3>
+        <p class="organisation">Kuza Factors | Current Professional Experience</p>
+        <p>
+          Working capital financing, SME origination, credit assessment,
+          portfolio risk and financing solutions for growing enterprises.
+        </p>
+      </div>
+
+      <div class="experience">
+        <h3>Fintech & Working Capital Finance</h3>
+        <p class="organisation">Wareflow Technologies</p>
+        <p>
+          Experience in innovative SME financing, transaction-based
+          financing models, business development and credit risk.
+        </p>
+      </div>
+
+      <div class="experience">
+        <h3>Development Finance & Agribusiness Partnerships</h3>
+        <p class="organisation">FACTS Africa and Development Finance Programmes</p>
+        <p>
+          SME financing, agricultural value-chain development,
+          women-led enterprise support, impact partnerships and
+          financial inclusion initiatives.
+        </p>
+      </div>
+
+      <div class="experience">
+        <h3>Banking & Relationship Management</h3>
+        <p class="organisation">Kenyan Banking Sector</p>
+        <p>
+          Over a decade of banking experience across relationship
+          management, business development, credit and financial services.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="experience">
-    <h3>Fintech & Working Capital Finance</h3>
-    <p>Wareflow Technologies</p>
-    <p>Experience in innovative SME financing, transaction-based
-    financing models, business development and credit risk.</p>
-  </div>
-
-  <div class="experience">
-    <h3>Development Finance & Agribusiness Partnerships</h3>
-    <p>FACTS Africa and development finance programmes</p>
-    <p>SME financing, agricultural value-chain development,
-    women-led enterprise support, impact partnerships and
-    financial inclusion initiatives.</p>
-  </div>
-
-  <div class="experience">
-    <h3>Banking & Relationship Management</h3>
-    <p>Kenyan Banking Sector</p>
-    <p>Over a decade of banking experience across relationship
-    management, business development, credit and financial services.</p>
-  </div>
 </section>
 
-<section class="soft" id="impact">
-  <div class="section-label">Selected Impact</div>
-  <h2 class="section-title">Creating Measurable Value</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>SME Finance</h3>
-      <p>Supported the development of SME financing portfolios,
-      including a USD 1.3 million SME portfolio onboarded
-      for a local fintech.</p>
+<!-- IMPACT -->
+
+<section id="impact" class="soft">
+
+  <div class="section-inner">
+
+    <div class="section-label">Selected Impact</div>
+
+    <h2 class="section-title">Creating Measurable Value</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>SME Finance</h3>
+        <p>
+          Supported the development of SME financing portfolios,
+          including a USD 1.3 million SME portfolio onboarded
+          for a local fintech.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Agricultural Enterprise</h3>
+        <p>
+          Contributed to programmes supporting more than 40
+          women-led and women-owned agricultural SMEs through
+          training, mentorship and financing initiatives.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Value Chain Development</h3>
+        <p>
+          Experience in agricultural value-chain financing,
+          climate-smart enterprise solutions and partnerships
+          connecting businesses to markets and capital.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Portfolio Development</h3>
+        <p>
+          Experience in building financing relationships,
+          developing institutional partnerships and expanding
+          access to working capital.
+        </p>
+      </div>
+
     </div>
-    <div class="card">
-      <h3>Agricultural Enterprise</h3>
-      <p>Contributed to programmes supporting more than 40
-      women-led and women-owned agricultural SMEs through
-      training, mentorship and financing initiatives.</p>
-    </div>
-    <div class="card">
-      <h3>Value Chain Development</h3>
-      <p>Experience in agricultural value-chain financing,
-      climate-smart enterprise solutions and partnerships
-      connecting businesses to markets and capital.</p>
-    </div>
-    <div class="card">
-      <h3>Portfolio Development</h3>
-      <p>Experience in building financing relationships,
-      developing institutional partnerships and expanding
-      access to working capital.</p>
-    </div>
+
   </div>
+
 </section>
+
+<!-- QUALIFICATIONS -->
 
 <section id="qualifications">
-  <div class="section-label">Education & Professional Development</div>
-  <h2 class="section-title">Qualifications & Training</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Academic Background</h3>
-      <p>BSc Horticulture</p>
-      <p>Further postgraduate studies as previously indicated
-      in my professional profile.</p>
+
+  <div class="section-inner">
+
+    <div class="section-label">Education & Professional Development</div>
+
+    <h2 class="section-title">Qualifications & Training</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Academic Background</h3>
+        <p>BSc Horticulture</p>
+        <p>
+          Postgraduate studies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Agro Credit Finance</h3>
+        <p>
+          International Learning Programme in Agro Credit Finance,
+          with exposure to impact financing and ESG in rural
+          agricultural SMEs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Ecosystem Banking & Trade Finance</h3>
+        <p>
+          Professional training in ecosystem banking,
+          agricultural value chains and trade financing.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Supply Chain Finance</h3>
+        <p>
+          Factor Chain International certification in
+          Supply Chain Financing and Reverse Factoring.
+        </p>
+      </div>
+
     </div>
-    <div class="card">
-      <h3>Agro Credit Finance</h3>
-      <p>International Learning Programme in Agro Credit Finance,
-      with exposure to impact financing and ESG in rural
-      agricultural SMEs.</p>
-    </div>
-    <div class="card">
-      <h3>Ecosystem Banking & Trade Finance</h3>
-      <p>Professional training in ecosystem banking,
-      agricultural value chains and trade financing.</p>
-    </div>
-    <div class="card">
-      <h3>Supply Chain Finance</h3>
-      <p>Factor Chain International certification in
-      Supply Chain Financing and Reverse Factoring.</p>
-    </div>
+
   </div>
+
 </section>
+
+<!-- PROFESSIONAL APPROACH -->
 
 <section id="approach" class="soft">
-  <div class="section-label">Professional Philosophy</div>
-  <h2 class="section-title">How I Create Value</h2>
-  <p class="intro">
-    I believe sustainable business growth requires more than access
-    to capital. It requires credible information, sound risk assessment,
-    strong partnerships and financing structures that reflect the
-    realities of the businesses they serve.
-    <br><br>
-    My professional approach is centred on translating commercial
-    opportunities into viable financing propositions while balancing
-    growth, risk, institutional objectives and long-term impact.
-  </p>
-  <div style="margin-top:25px">
-    <span class="tag">Commercial Strategy</span>
-    <span class="tag">Credit Governance</span>
-    <span class="tag">SME Development</span>
-    <span class="tag">Investment Partnerships</span>
-    <span class="tag">Financial Inclusion</span>
-    <span class="tag">Portfolio Risk</span>
+
+  <div class="section-inner">
+
+    <div class="section-label">Professional Philosophy</div>
+
+    <h2 class="section-title">How I Create Value</h2>
+
+    <p class="intro">
+      I believe sustainable business growth requires more than access
+      to capital. It requires credible information, sound risk assessment,
+      strong partnerships and financing structures that reflect the
+      realities of the businesses they serve.
+
+      <br><br>
+
+      My professional approach is centred on translating commercial
+      opportunities into viable financing propositions while balancing
+      growth, risk, institutional objectives and long-term impact.
+    </p>
+
+    <div style="margin-top:25px">
+
+      <span class="tag">Commercial Strategy</span>
+      <span class="tag">Credit Governance</span>
+      <span class="tag">SME Development</span>
+      <span class="tag">Investment Partnerships</span>
+      <span class="tag">Financial Inclusion</span>
+      <span class="tag">Portfolio Risk</span>
+
+    </div>
+
   </div>
+
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
-  <div class="section-label" style="color:#d9bd70">LET'S CONNECT</div>
 
-  <h2 class="section-title">
-    Building Partnerships. Unlocking Opportunities.
-  </h2>
+  <div class="section-inner">
 
-  <p>
-    I welcome conversations with employers, investors,
-    development finance institutions and organisations
-    seeking expertise in business development, credit,
-    risk management and SME finance.
-  </p>
+    <div class="section-label">Let's Connect</div>
 
-  <div style="margin-top:30px; line-height:2.5">
+    <h2 class="section-title">
+      Building Partnerships. Unlocking Opportunities.
+    </h2>
 
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:Teresanyangi.wabwire@outlook.com"
-         style="color:#d9bd70">
-        Teresanyangi.wabwire@outlook.com
-      </a>
+    <p class="contact-intro">
+      I welcome conversations with employers, investors,
+      development finance institutions and organisations
+      seeking expertise in business development, credit,
+      risk management and SME finance.
     </p>
 
-    <p>
-      <strong>Telephone:</strong>
-      <a href="tel:+254726221939" style="color:#d9bd70">
-        +254 726 221 939
-      </a>
-    </p>
+    <div class="contact-details">
 
-    <p>
-      <strong>LinkedIn:</strong>
-      <a href="https://www.linkedin.com/in/teresa-wabwire-4023ba263/" target="_blank"
-         rel="noopener noreferrer" style="color:#d9bd70">
-        Connect with me on LinkedIn
-      </a>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:Teresanyangi.wabwire@outlook.com">
+          Teresanyangi.wabwire@outlook.com
+        </a>
+      </p>
+
+      <p>
+        <strong>Telephone:</strong>
+        <a href="tel:+254726221939">
+          +254 726 221 939
+        </a>
+      </p>
+
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/teresa-wabwire-4023ba263/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Connect with me on LinkedIn
+        </a>
+      </p>
+
+    </div>
+
+    <p style="margin-top:25px;font-size:14px;color:#d9e7dd">
+      Based in Kenya | Open to regional and international opportunities
     </p>
 
   </div>
 
-  <p style="margin-top:25px;font-size:14px">
-    Based in Kenya | Open to regional and international opportunities
-  </p>
 </section>
+
+<!-- FOOTER -->
+
+<footer>
   © 2026 Teresa Wabwire | Professional Portfolio
-  <br>Credit • Risk • Finance • Growth
+  <br>
+  <span>Credit • Risk • Finance • Growth</span>
 </footer>
 
 </body>
